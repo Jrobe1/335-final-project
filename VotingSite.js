@@ -71,19 +71,20 @@ async function insertApplication(application) {
 }
 
 
-app.get("/random-players", async (req, res) => {
+async function getRandom() {
   try {
-    const randomPlayers = await Player.aggregate([
+    const randoms = await board.aggregate([
       { $sample: { size: 3 } }
     ]);
 
-    if (randomPlayers.length < 3) {
-      return res.send("-1");
+    if (randoms.length < 3) {
+      return -1;
     }
 
-    res.json(randomPlayers);
+    return json(randoms);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Database error");
-  }
-});
+    return 500
+}
+}
+
