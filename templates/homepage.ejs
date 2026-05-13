@@ -24,7 +24,7 @@
                         id="img1"
                         class="voteOption">
                 </div>
-                <h2><%- label1 %></h2>
+                <h2 id="label1"><%- label1 %></h2>
             </div>
             <div class="optionContainer">
                 <div class="imageContainer">
@@ -32,7 +32,7 @@
                         id="img2"
                         class="voteOption">
                 </div>
-                <h2><%- label2 %></h2>
+                <h2 id="label2"><%- label2 %></h2>
             </div>
             <div class="optionContainer">
                 <div class="imageContainer">
@@ -40,10 +40,10 @@
                         id="img3"
                         class="voteOption">
                 </div>
-                <h2><%- label3 %></h2>
+                <h2 id="label3"><%- label3 %></h2>
             </div>
         </div>
-        <form id="votingForm">
+        <form id="votingForm" action="/" method="post">
             <div id="radioContainer">
                 <input type="radio" name="voteChoice" value="choice1" required>
                 <input type="radio" name="voteChoice" value="choice2">
