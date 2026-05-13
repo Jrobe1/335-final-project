@@ -38,3 +38,52 @@ app.get("/", (request, response) => {
 app.get("/leaderboard", (request, response) => {
   response.render("leaderboard");
 });
+
+const boardSchema = new mongoose.Schema({
+  name: String,
+  id: Number,
+  yesVotes: Number,
+  noVotes: Number
+});
+
+const board = mongoose.model("board", boardSchema);
+
+
+async function insertApplication(application) {
+    const databaseName = "CMSC335DB";
+    const collectionName = "campApplicants";
+    const uri = process.env.MONGO_CONNECTION_STRING;
+
+    const client = new MongoClient(uri, { serverApi: ServerApiVersion.v1 });
+    await client.connect();
+      const database = client.db(databaseName);
+      const collection = database.collection(collectionName);
+
+      const applicant = { name: application.name, email: application.email, gpa: Number(application.gpa), background: application.backgroundInfo };
+      let result = await collection.insertOne(applicant);
+    
+   
+
+      
+    
+    
+
+}
+
+
+app.get("/random-players", async (req, res) => {
+  try {
+    const randomPlayers = await Player.aggregate([
+      { $sample: { size: 3 } }
+    ]);
+
+    if (randomPlayers.length < 3) {
+      return res.send("-1");
+    }
+
+    res.json(randomPlayers);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Database error");
+  }
+});
