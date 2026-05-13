@@ -12,9 +12,9 @@
     <div id="mainContainer">
         <div class="header">
             <br>
-            <a href="https://www.google.com/"><Button>Home</Button></a>
+            <a href="http://localhost:<%- portno %>"><Button>Home</Button></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.google.com/"><Button>Top Winners</Button></a>
+            <a href="http://localhost:<%- portno %>/leaderboard"><Button>Top Winners</Button></a>
         </div>
         <h1>Voting Leaderboard</h1>
         <h3>Which things got the most votes?</h3>
@@ -25,6 +25,7 @@
                 <th>&nbsp;&nbsp;Number of Wins&nbsp;&nbsp;</th>
                 <th>&nbsp;&nbsp;Number of Losses&nbsp;&nbsp;</th>
             </tr>
+            <%- tableEntries %>
         </table>
     </div>
 </body>

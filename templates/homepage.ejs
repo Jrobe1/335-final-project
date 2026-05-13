@@ -12,40 +12,40 @@
     <div id="mainContainer">
         <div class="header">
             <br>
-            <a href="https://www.google.com/"><Button>Home</Button></a>
+            <a href="http://localhost:<%- portno %>"><Button>Home</Button></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.google.com/"><Button>Top Winners</Button></a>
+            <a href="http://localhost:<%- portno %>/leaderboard"><Button>Top Winners</Button></a>
         </div>
         <h1>Which is the Best?</h1>
         <div id="optionsWindow">
             <div class="optionContainer">
                 <div class="imageContainer">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/49/84/07/1000_F_49840798_437FUY3eumwYK4KcP4sxBRyyqmGju6vo.jpg"
-                        alt="cat"
+                    <img src="<%- img1url %>"
+                        id="img1"
                         class="voteOption">
                 </div>
-                <h2>Meow</h2>
+                <h2><%- label1 %></h2>
             </div>
             <div class="optionContainer">
                 <div class="imageContainer">
-                    <img src="https://www.pawsbyzann.com/wp-content/uploads/2018/12/00034-ZH-Beagle-776x1024.jpg"
-                        alt="cat"
+                    <img src="<%- img2url %>"
+                        id="img2"
                         class="voteOption">
                 </div>
-                <h2>Bark</h2>
+                <h2><%- label2 %></h2>
             </div>
             <div class="optionContainer">
                 <div class="imageContainer">
-                    <img src="https://www.pawsbyzann.com/wp-content/uploads/2018/12/00034-ZH-Beagle-776x1024.jpg"
-                        alt="cat"
+                    <img src="<%- img3url %>"
+                        id="img3"
                         class="voteOption">
                 </div>
-                <h2>Woof</h2>
+                <h2><%- label3 %></h2>
             </div>
         </div>
         <form id="votingForm">
             <div id="radioContainer">
-                <input type="radio" name="voteChoice" value="choice1">
+                <input type="radio" name="voteChoice" value="choice1" required>
                 <input type="radio" name="voteChoice" value="choice2">
                 <input type="radio" name="voteChoice" value="choice3">
             </div>
@@ -54,9 +54,6 @@
             <br>
         </form>
         <script>
-            window.onsubmit = () => {
-                //input validation probably not needed
-            }
         </script>
     </div>
 </body>
