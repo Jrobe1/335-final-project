@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-require("dotenv").config({ //connect environment file
+require("dotenv").config({
   path: path.resolve(__dirname, "./.env"),
   quiet: true
 });
@@ -14,10 +14,10 @@ const app = express();
 const port = 8000;
 
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "templates")); //directory of templates
+app.set("views", path.resolve(__dirname, "templates")); 
 
-app.use(bodyParser.urlencoded({ extended: false })); //initialize request.body with post info
-app.use(express.static(__dirname + '/templates')); //to access static CSS file
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/templates')); 
 app.use(express.json());
 
 
