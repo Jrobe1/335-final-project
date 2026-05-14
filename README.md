@@ -1,9 +1,9 @@
 # 335-final-project
-Submitted by: Joy Roberts (jrober19)  
-Group Members: Joy Roberts (jrober19), Christopher Cannady (jacquicannady)  
-App Description:  
-YouTube Video Link:  
-APIs:  
-Contact Email:  [jrober19@terpmail.umd.edu](mailto:jrober19@terpmail.umd.edu)  
-Deployed App Link:  
-AI Use: 1. Claude, 2. ChatGPT  
+**Submitted by:** Joy Roberts (jrober19)  
+**Group Members:** Joy Roberts (jrober19), Christopher Cannady (jacquicannady)  
+**App Description:** Vote on the best of 3 random dog breeds, and see a leaderboard of dogs with most wins  
+**YouTube Video Link:**  
+**APIs:** Dog API [(https://dog.ceo/dog-api/)] (https://dog.ceo/dog-api/)  
+**Contact Email:** [jrober19@terpmail.umd.edu](mailto:jrober19@terpmail.umd.edu)  
+**Deployed App Link:** [https://nelson.optimus.cxflame.com/] (https://nelson.optimus.cxflame.com/)  
+**AI Use:** 1. ChatGPT  
