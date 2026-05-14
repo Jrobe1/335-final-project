@@ -256,21 +256,6 @@ app.get("/leaderboard", async (request, response) => {
 });
 
 
-async function insertApplication(application) {
-    const databaseName = "CMSC335DB";
-    const collectionName = "campApplicants";
-    const uri = process.env.MONGO_CONNECTION_STRING;
-
-    const client = new MongoClient(uri, { serverApi: ServerApiVersion.v1 });
-    await client.connect();
-      const database = client.db(databaseName);
-      const collection = database.collection(collectionName);
-
-      const applicant = { name: application.name, email: application.email, gpa: Number(application.gpa), background: application.backgroundInfo };
-      let result = await collection.insertOne(applicant);
-
-}
-
 
 async function getRandom() {
   try {

@@ -5,5 +5,5 @@
 **YouTube Video Link:** https://youtu.be/dyerpIIJ8vs  
 **APIs:** Dog API (https://dog.ceo/dog-api/)  
 **Contact Email:** [jrober19@terpmail.umd.edu](mailto:jrober19@terpmail.umd.edu)  
-**Deployed App Link:** https://nelson.optimus.cxflame.com/  
+**Deployed App Link:** https://nelson.optimus.cxflame.com/. *UNIVERSITY DNS HAS BEEN HAVING ISSUES LOADING THIS WEBSITE IF IT DOES NOT LOAD PLEASE GO TO -------------*
 **AI Use:** 1. ChatGPT  
