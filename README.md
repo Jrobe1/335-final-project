@@ -5,5 +5,5 @@
 **YouTube Video Link:** https://youtu.be/dyerpIIJ8vs  
 **APIs:** Dog API (https://dog.ceo/dog-api/)  
 **Contact Email:** [jrober19@terpmail.umd.edu](mailto:jrober19@terpmail.umd.edu)  
-**Deployed App Link:** https://nelson.cxflame.com/. *UNIVERSITY DNS HAS BEEN HAVING ISSUES LOADING THIS WEBSITE IF IT DOES NOT LOAD PLEASE GO TO -------------*  
+**Deployed App Link:** https://nelson.cxflame.com/. *UNIVERSITY DNS HAS BEEN HAVING ISSUES LOADING THIS WEBSITE IF IT DOES NOT LOAD PLEASE GO TO:* https://vote-best-dog-breed.onrender.com/  
 **AI Use:** 1. ChatGPT  
