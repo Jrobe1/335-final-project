@@ -129,7 +129,6 @@ function formatBreedForImage(name) {
 //home page, fresh load
 app.get("/", async (request, response) => {
   /*
-    Chris TODO:
     *this router is used when home page is opened outside of the context of a vote being submitted.
      (e.g., manually entering url, clicking home button on page)
     -Retrieve 3 random distinct entries from the collection. No other criteria are considered.
@@ -160,43 +159,13 @@ app.get("/", async (request, response) => {
     variables.img2url = await getImage(formattedBreeds[1]);
     variables.img3url = await getImage(formattedBreeds[2]);
 
-
-
-
-
   /*
      The label 1-3 names can come directly from the entries 'name', the images should be obtained via API.
-     See my Discord comment for my idea on how this will work and what API to consider.
-     The variables obj is currently filled with "dummy" data so you can see the page render.
-     Feel free to temporarily edit the code here to add entries for testing, it is currently empty.
   */
-  /*
-      //example code of adding entry to collection
-      //(use for testing; not in final program, where we assume DB has all the entries needed beforehand)
-      (async () => {
-        const testentry = new Board({
-            name: "test",
-            wins: 0,
-            losses: 0
-          });
-        await testentry.save();
-      })();
-  */
-  // const variables = {
-  //       img1url: "https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg",
-  //       img2url: "https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg",
-  //       img3url: "https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg",
-  //       label1: "A",
-  //       label2: "B",
-  //       label3: "C"
-  // };
   response.render("homepage", variables);
 });
 
-// //home page, upon any vote submit (vote submits reload the home page)
-// app.post("/", (request, response) => {
-//   /*
-//     Chris TODO:
+//home page, upon any vote submit (vote submits reload the home page)
 //     *This router is used every time a vote is submitted, which is via POST.
 //     -obtain the radio button selection from the form (look at templates/homepage.ejs for reference).
 //     -based on the radio button selected, find which of the 3 options "won".
@@ -205,19 +174,6 @@ app.get("/", async (request, response) => {
 //     -update all 3 depicted entries in the collection according to which "won".
 //      the voted entry should have 'wins' incremented, and the other 2 should have 'losses' incremented.
 //     -refresh (re-render) the page with a new poll by editing the variables object.
-//      you can copy the code from the GET router above.
-//      The variables obj is currently filled with "dummy" data so you can see the page render.
-//   */
-//   const variables = {
-//         img1url: "https://www.pawsbyzann.com/wp-content/uploads/2019/02/Bruce-Final-small.jpg",
-//         img2url: "https://www.pawsbyzann.com/wp-content/uploads/2019/02/Bruce-Final-small.jpg",
-//         img3url: "https://www.pawsbyzann.com/wp-content/uploads/2019/02/Bruce-Final-small.jpg",
-//         label1: "A",
-//         label2: "B",
-//         label3: "C"
-//   };
-//   response.render("homepage", variables);
-// });
 
 app.post("/", async (request, response) => {
   try {
@@ -263,10 +219,7 @@ app.post("/", async (request, response) => {
   }
 });
 
-// //leaderboard page
-// app.get("/leaderboard", (request, response) => {
-//   /*
-//     Chris TODO:
+//leaderboard page
 //     *This router is used when showing the leaderboard table page 
 //      (access via "top winners" button)
 //     -retrieve all collection entries.
@@ -277,13 +230,6 @@ app.post("/", async (request, response) => {
 //      You do not need to add the header or surrounding table (see templates/leaderboard.ejs).
 //      The top row should be the entry with the most wins; # of losses is irrelevent to the order.
 //      All existing entries should appear in the table.
-//      The variables obj is currently filled with "dummy" data so you can see the page render.
-//   */
-//   const variables = {
-//         tableEntries: "<tr><td>Col1</td><td>Col2</td><td>Col3</td></tr>"
-//   };
-//   response.render("leaderboard", variables);
-// });
 
 app.get("/leaderboard", async (request, response) => {
   try {
