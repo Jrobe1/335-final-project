@@ -44,13 +44,16 @@
             </div>
         </div>
         <form id="votingForm" action="/" method="post">
+            <input type="hidden" name="label1" value="<%- label1 %>">
+            <input type="hidden" name="label2" value="<%- label2 %>">
+            <input type="hidden" name="label3" value="<%- label3 %>">
             <div id="radioContainer">
                 <input type="radio" name="voteChoice" value="choice1" required>
                 <input type="radio" name="voteChoice" value="choice2">
                 <input type="radio" name="voteChoice" value="choice3">
             </div>
             <br><br>
-            <input type="submit" value="Vote!">
+            <input type="submit" value="vote">
             <br>
         </form>
         <script>
